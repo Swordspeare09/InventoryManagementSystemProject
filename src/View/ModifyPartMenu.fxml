@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifyPartMenuController">
+   <children>
+      <Label layoutX="156.0" layoutY="143.0" text="Modify Part">
+         <font>
+            <Font name="Calibri Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="isInHousePart" layoutX="340.0" layoutY="147.0" mnemonicParsing="false" onAction="#onActionInhouseRB" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="typeOfParts" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="isOutsourcedPart" layoutX="534.0" layoutY="147.0" mnemonicParsing="false" onAction="#onActionOutsourcedRB" text="Outsourced" toggleGroup="$typeOfParts" />
+      <Label layoutX="187.0" layoutY="208.0" text="ID" />
+      <Label layoutX="187.0" layoutY="248.0" text="Name" />
+      <Label layoutX="187.0" layoutY="298.0" text="Inv" />
+      <Label layoutX="187.0" layoutY="340.0" text="Price" />
+      <Label fx:id="specialLabel" layoutX="187.0" layoutY="428.0" text="Label" visible="false" />
+      <Label layoutX="187.0" layoutY="383.0" text="Max" />
+      <Label layoutX="534.0" layoutY="383.0" text="Min" />
+      <TextField fx:id="idTF" disable="true" layoutX="534.0" layoutY="193.0" prefHeight="31.0" prefWidth="140.0" />
+      <TextField fx:id="nameTF" layoutX="534.0" layoutY="243.0" prefHeight="31.0" prefWidth="140.0" />
+      <TextField fx:id="stockTF" layoutX="534.0" layoutY="293.0" prefHeight="31.0" prefWidth="140.0" />
+      <TextField fx:id="priceTF" layoutX="534.0" layoutY="335.0" prefHeight="31.0" prefWidth="140.0" />
+      <TextField fx:id="maxTF" layoutX="340.0" layoutY="378.0" prefHeight="31.0" prefWidth="140.0" />
+      <TextField fx:id="minTF" layoutX="639.0" layoutY="378.0" prefHeight="31.0" prefWidth="140.0" />
+      <TextField fx:id="specialTF" layoutX="340.0" layoutY="423.0" prefHeight="31.0" prefWidth="140.0" visible="false" />
+      <Button layoutX="534.0" layoutY="508.0" mnemonicParsing="false" onAction="#onActionSaveModifiedPart" prefHeight="31.0" prefWidth="56.0" text="Save" />
+      <Button layoutX="674.0" layoutY="508.0" mnemonicParsing="false" onAction="#onActionCancelModifiedPart" text="Cancel" />
+   </children>
+</AnchorPane>

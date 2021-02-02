@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER_LEFT" hgap="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" vgap="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMenuController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="102.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="88.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="88.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="88.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="88.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="88.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="88.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="88.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="69.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="375.0" minHeight="10.0" prefHeight="340.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <children>
+      <Label text="Inventory Managment System" GridPane.columnIndex="1" GridPane.columnSpan="3">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="partsTV" prefHeight="375.0" prefWidth="311.0" GridPane.columnSpan="4" GridPane.rowIndex="2">
+        <columns>
+          <TableColumn fx:id="partIDCol" prefWidth="116.0" text="ID" />
+          <TableColumn fx:id="partsNameCol" prefWidth="116.0" text="Name" />
+            <TableColumn fx:id="partsInventoryCol" prefWidth="116.0" text="Inventory" />
+            <TableColumn fx:id="partsPriceCol" prefWidth="116.0" text="Price" />
+        </columns>
+      </TableView>
+      <TableView fx:id="productTV" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.columnSpan="4" GridPane.rowIndex="2">
+        <columns>
+          <TableColumn fx:id="productIDCol" prefWidth="116.0" text="ID" />
+          <TableColumn fx:id="productNameCol" prefWidth="116.0" text="Name" />
+            <TableColumn fx:id="productInventoryCol" prefWidth="116.0" text="Inventory" />
+            <TableColumn fx:id="productPriceCol" prefWidth="105.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button mnemonicParsing="false" onAction="#onActionAddPart" text="Add" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#onActionModifyPart" text="Modify" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#onActionDeletePart" text="Delete" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#onActionAddProduct" text="Add" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#onActionModifyProduct" text="Modify" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#onActionDeleteProduct" text="Delete" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+      <Button mnemonicParsing="false" onAction="#onActionExitProgram" prefWidth="63.0" text="Exit" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <children>
+            <Label text="Parts" />
+            <Button mnemonicParsing="false" onAction="#onActionSearchPartList" text="Search" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <children>
+            <Label text="Products" />
+            <Button mnemonicParsing="false" onAction="#onActionSearchProductList" text="Search" />
+         </children>
+      </HBox>
+      <TextField fx:id="partSearchTF" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+      <TextField fx:id="productSearchTF" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+   </children>
+</GridPane>
