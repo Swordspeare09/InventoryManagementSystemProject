@@ -17,7 +17,7 @@
 
 ## About The Project
 
-This project was created as a simulation to a scneario where you were tasked by a company to create a GUI mark up to solve their growing inventory problem. Given the business standards of the project, this program makes use of exceptions and other class handlings to validate user input. 
+This project was created as a simulation to a scenario  where you were tasked by a company to create a GUI mark up to solve their growing inventory problem. Given the business standards of the project, this program makes use of exceptions and other class handlings to validate user input. 
 
 ### Built With
 
